@@ -1,0 +1,55 @@
+create table employee (
+employee_id char(20) primary key ,
+name char(20)
+);
+
+create table company(
+company_id int primary key,
+company_name char(200),
+company_address char(200),
+debt_amount int,
+debt_offer int,
+phone_number char(20),
+interest char(10),
+notes char (200)
+);
+
+create table CurrentCase (
+case_number int primary key,
+company_id int ,
+case_company char(20),
+company_name char(200),
+last_date char(20),
+interest char(10),
+percentage int,
+employee_id char(20),
+notes char(200),
+foreign key (company_id) references company(company_id),
+foreign key (company_name) references company(company_name),
+foreign key (employee_id) references employee(employee_id)
+);
+
+insert into employee(employee_id, name)
+values ('jgulkowitz', 'Jacob Gulkowitz');
+
+insert into employee(employee_id, name)
+values ('dreiss', 'David Reiss');
+
+insert into employee(employee_id, name)
+values ('agulkowitz', 'Abraham Gulkowitz');
+
+insert into employee(employee_id, name)
+values ('epacer', 'Eric Packer');
+
+insert into company(company_id, company_name, company_address, debt_amount, debt_offer, phone_number, interest, notes)
+VALUES  ('0001', 'All Weld Mobile Welding','15 Robinson Drive Mansfeild PA, 16933', '7804', '702.36','(000) 000 - 0000','No','null');
+
+insert into company(company_id, company_name, company_address, debt_amount, debt_offer, phone_number, interest, notes)
+VALUES  ('0002', 'Allison Crane and Rigging','2817 Lycoming Creek Road Williamsport PA 17701', '15692.5', '1412.33','(800) 232-2977','Yes','8/16 mail document\
+s? missing');
+
+insert into CurrentCase(case_number, company_id, case_company, company_name, last_date, interest, percentage, employee_id, notes)
+values ('001','001','Tri-State Trucking Company', 'All Weld Mobile Welding', 'January 20, 2018', 'No','0.09','epacker','null');
+
+insert into CurrentCase(case_number, company_id, case_company, company_name, last_date, interest, percentage, employee_id, notes)
+values ('001','002','Tri-State Trucking Company', 'Allison Crane and Rigging', 'January 20, 2018', 'Yes','0.09','epacker','null');
