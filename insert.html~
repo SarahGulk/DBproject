@@ -1,0 +1,29 @@
+
+<html>
+<head>
+    <title>Enter New Company</title>
+</head>
+<body>
+  <form action="cgi-bin/insert.py">
+    <label for="id">Enter the company ID: </label>
+    <input type="text" name="id"><br>
+    <label for="name">Enter the company name:   </label>
+    <input type="text" name="name"><br>
+    <label for="address">Enter the company address: </label>
+    <input type="text" name="address"><br>
+    <label for="debt"> Enter the company debt amount: </label>
+    <input type="text" name="debt"><br>
+    <label for="offer"> Enter Brookville Adviosry's offer: </label>
+    <input type="text" name="offer"><br>
+    <label for="phone"> Enter the company phone number: </label>
+    <input type="text" name="number"> Please enter in form (000) 000-000 <br>
+    <label for="interest"> Enter company's current interest: </label>
+    <input type="text" name="interest"> Please enter in form Yes/No <br>
+    <label for="note"> Enter notes here: </label>
+    <input type="text" name="note"<br>
+    <input type="submit" value="Submit">
+  <body style="background-color:powderblue;">
+</form>
+
+</body>
+</html>

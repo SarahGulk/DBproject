@@ -4,15 +4,15 @@
     <title>Page Title</title>
   </head>
   <body>
-
+        
     <h1>Brookville Advisory</h1>
     <body style="background-color:powderblue;">
- <form action="cgi-bin/new.py" method = "post">
+ <form action="newcase.py" method = "post">
   <input type="radio" name="status" value="current"> Current Case<br>
   <input type="radio" name="status" value="new"> New Case<br>
+<input type="radio" name="status" value="company"> New Company<br>
   <input type="button" value="Submit" onclick="check();">
  </form>
-
 <!--Function to check password the already set password is admin-->
 <script type="text/javascript">
 function check(){
@@ -20,14 +20,18 @@ function check(){
   var i;
 if(status[0].checked){
 		
-		 window.location="new.html";
+		 window.location="cgi-bin/select.py";
 	}
 		 
 if(status[1].checked){
                
                  window.location="newcase.html";
-        }
-                 }
+}
+if(status[2].checked){
+
+window.location = "insert.html";
+}
+}
 </script>
 </body>
 </html>
